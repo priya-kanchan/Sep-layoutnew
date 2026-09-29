@@ -1,0 +1,593 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realeste — Crafting Lifestyles</title>
+  <meta name="description" content="Premium 3 & 4 BHK residences crafted for those who seek more than just a home." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    /* Between mobile (<=680px) and the 1366px laptop design, render the laptop
+       layout and scale it down to fit, so every screen shows the same design. */
+    (function () {
+      var DESIGN = 1366, MOBILE = 680;
+      function fit() {
+        var w = window.innerWidth, html = document.documentElement.style;
+        if (w > MOBILE && w < DESIGN) {
+          html.zoom = w / DESIGN;
+          html.setProperty('--vw', DESIGN / 100 + 'px');
+        } else {
+          html.zoom = '';
+          html.removeProperty('--vw');
+        }
+      }
+      fit();
+      window.addEventListener('resize', fit);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============ HEADER ============ -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="logo" aria-label="Realeste home">
+        <span class="logo__mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="logo__text">
+          <strong>REALESTE</strong>
+          <small>CRAFTING LIFESTYLES</small>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link active">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#amenities" class="nav__link">Amenities</a></li>
+          <li><a href="#residences" class="nav__link">Price List</a></li>
+          <li><a href="#highlights" class="nav__link">Highlights</a></li>
+          <li><a href="#gallery" class="nav__link">Gallery</a></li>
+          <li><a href="#location" class="nav__link">Location</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn--dark nav__cta" data-enquiry="Book A Site Visit">Book A Visit</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__content container">
+        <div class="hero__text reveal">
+          <p class="eyebrow">Where Luxury Meets Life</p>
+          <h1 class="hero__title">Spaces that<br /><em>Inspire Living</em></h1>
+          <p class="hero__lead">Premium 3 &amp; 4 BHK residences crafted for those who seek more than just a home.</p>
+          <div class="hero__actions">
+            <a href="#residences" class="btn btn--dark" data-enquiry="Explore Residences">
+              Explore Residences
+              <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+            </a>
+            <button class="play" id="playBtn" type="button">
+              <span class="play__icon"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z" /></svg></span>
+              <span class="play__label">Watch Film</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="hero__media">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80" alt="Modern luxury residence at dusk" />
+      </div>
+    </section>
+
+    <!-- ============ FEATURES STRIP ============ -->
+    <section class="features" aria-label="Highlights">
+      <div class="container features__inner">
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 32 32"><path d="M4 28h24M7 28V12l6-3v19M13 28V6l7 3v19M20 28V14l5 2v12M9 15h2M9 19h2M9 23h2M15 11h3M15 15h3M15 19h3M15 23h3M22 19h1.5M22 23h1.5"/></svg>
+          <span>Iconic<br />Architecture</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="3"/><path d="M16 4v6M16 22v6M4 16h6M22 16h6M7.5 7.5l4.2 4.2M20.3 20.3l4.2 4.2M7.5 24.5l4.2-4.2M20.3 11.7l4.2-4.2"/></svg>
+          <span>World Class<br />Amenities</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12"/><path d="M16 9c-3 0-5 2.2-5 5 0 3.6 5 8.5 5 8.5s5-4.9 5-8.5c0-2.8-2-5-5-5z"/><circle cx="16" cy="14" r="1.8"/></svg>
+          <span>Prime<br />Location</span>
+        </div>
+        <div class="feature">
+          <svg class="icon" viewBox="0 0 32 32"><circle cx="16" cy="9" r="4"/><path d="M8 28v-6a8 8 0 0 1 16 0v6M12 28v-5M20 28v-5M16 15l-2 3 2 6 2-6z"/></svg>
+          <span>Trusted<br />Developer</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="about__text reveal">
+        <p class="eyebrow">About The Project</p>
+        <h2 class="h2">A New Standard<br />Of Timeless Elegance</h2>
+        <p class="body">Realeste brings you an iconic address that redefines luxury living. Every detail is meticulously planned to offer a lifestyle that is modern, comfortable and future-ready.</p>
+          <div class="signature">
+            <span class="signature__name">Project Name </span>
+            <small>Location address</small>
+          </div>
+        <ul class="stats">
+          <li><strong data-count="4">4</strong><span>Towers</span></li>
+          <li><strong data-count="38">38</strong><span>Floors</span></li>
+          <li><strong data-count="312">312</strong><span>Residences</span></li>
+          <li><strong data-count="5.2" data-decimals="1">5.2</strong><span>Acres</span></li>
+        </ul>
+      </div>
+      <div class="about__media">
+        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1400&q=80" alt="Spacious living room with city skyline view" loading="lazy" />
+        <div class="badge">
+          <small>Ready For<br />Possession</small>
+          <strong>2026</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AMENITIES ============ -->
+    <section class="amenities" id="amenities">
+      <div class="container amenities__inner">
+        <div class="amenities__head reveal">
+          <p class="eyebrow eyebrow--light">World Class Amenities</p>
+          <h2 class="h2 h2--light">Designed For<br />A Better Life</h2>
+          <a href="#gallery" class="btn btn--outline-light" data-enquiry="Explore Amenities">
+            View All Amenities
+            <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+          </a>
+        </div>
+        <ul class="amenities__list">
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><path d="M11 18V6a2 2 0 0 1 4 0M19 18V6a2 2 0 0 1 4 0M11 10h8M11 14h8M4 21c2 0 2 1.5 4 1.5S10 21 12 21s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5M4 26c2 0 2 1.5 4 1.5S10 26 12 26s2 1.5 4 1.5 2-1.5 4-1.5 2 1.5 4 1.5 2-1.5 4-1.5"/></svg>
+            <span>Infinity Pool</span>
+          </li>
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><path d="M4 28h24M6 28V12h20v16M9 12V7h14v5M16 4v3M10 16v8M14 16v8M18 16v8M22 16v8"/></svg>
+            <span>Club House</span>
+          </li>
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><path d="M16 28V14M16 20c-6 0-9-4-9-10 5 0 9 3 9 10zM16 17c0-6 3-10 9-10 0 6-3 10-9 10zM10 28h12"/></svg>
+            <span>Landscape<br />Gardens</span>
+          </li>
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><path d="M9 16h14M6 10v12M9 8v16M23 8v16M26 10v12M3 16h3M26 16h3"/></svg>
+            <span>Indoor<br />Gym</span>
+          </li>
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><circle cx="12" cy="7" r="3"/><circle cx="21" cy="11" r="2.4"/><path d="M8 28v-8l-2-1 2-7h8l2 7-2 1v8M18 28v-6l-1-5h8l-1 5v6"/></svg>
+            <span>Children's<br />Play Area</span>
+          </li>
+          <li class="amenity">
+            <svg class="icon" viewBox="0 0 32 32"><path d="M16 4l10 4v7c0 6.5-4.3 11.5-10 13-5.7-1.5-10-6.5-10-13V8z"/><path d="M11 16l3.5 3.5L21 13"/></svg>
+            <span>24x7<br />Security</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RESIDENCES ============ -->
+    <section class="residences" id="residences">
+      <div class="container residences__inner">
+        <div class="residences__main">
+          <div class="residences__head">
+            <div class="reveal">
+              <p class="eyebrow">Price List</p>
+              <h2 class="h2">Homes That Reflect<br />Your Aspirations</h2>
+            </div>
+            <div class="cards__nav">
+              <button type="button" class="cf-btn cf-btn--prev" id="cardsPrev" aria-label="Previous residence" aria-controls="cards">
+                <svg class="arrow" viewBox="0 0 20 10"><path d="M20 5H2M6 1L2 5l4 4" /></svg>
+              </button>
+              <button type="button" class="cf-btn cf-btn--next" id="cardsNext" aria-label="Next residence" aria-controls="cards">
+                <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+              </button>
+            </div>
+          </div>
+          <div class="cards" id="cards">
+            <article class="card reveal">
+              <div class="card__img"><img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="3 BHK living room" loading="lazy" /></div>
+              <div class="card__body">
+                <h3 class="card__type">3 BHK</h3>
+                <small>Starting From</small>
+                <div class="card__row">
+                  <strong class="card__price">₹1.25 Cr*</strong>
+                  <a href="#contact" class="card__link" data-enquiry="3 BHK Residences">View Details</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="card__img"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="4 BHK living and dining area" loading="lazy" /></div>
+              <div class="card__body">
+                <h3 class="card__type">4 BHK</h3>
+                <small>Starting From</small>
+                <div class="card__row">
+                  <strong class="card__price">₹1.75 Cr*</strong>
+                  <a href="#contact" class="card__link" data-enquiry="4 BHK Residences">View Details</a>
+                </div>
+              </div>
+            </article>
+            <article class="card reveal">
+              <div class="card__img"><img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80" alt="Penthouse terrace at dusk" loading="lazy" /></div>
+              <div class="card__body">
+                <h3 class="card__type">Penthouse</h3>
+                <small>Starting From</small>
+                <div class="card__row">
+                  <strong class="card__price">₹3.80 Cr*</strong>
+                  <a href="#contact" class="card__link" data-enquiry="Penthouse Collection">View Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <aside class="residences__side reveal">
+          <h3 class="h3">Every Home,<br />A Masterpiece</h3>
+          <p class="body body--sm">Spacious layouts, abundant natural light and premium finishes come together to create your perfect home.</p>
+          <ul class="checklist">
+            <li>
+              <svg class="icon" viewBox="0 0 32 32"><path d="M5 14L16 5l11 9v13H5z"/><rect x="12" y="15" width="8" height="7" rx="1"/><path d="M14 18h4"/></svg>
+              Smart Home Automation
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 32 32"><circle cx="16" cy="13" r="7"/><path d="M12 19l-2 9 6-3 6 3-2-9M13 13l2 2 4-4"/></svg>
+              Premium Specifications
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11"/><circle cx="16" cy="16" r="6"/><path d="M16 5v5M16 22v5M5 16h5M22 16h5"/></svg>
+              Vastu Compliant
+            </li>
+            <li>
+              <svg class="icon" viewBox="0 0 32 32"><path d="M6 27V9a3 3 0 0 1 3-3h14a3 3 0 0 1 3 3v18M4 27h24M6 18h20M11 18v9M16 18v9M21 18v9"/></svg>
+              Private Balcony
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn--dark" data-enquiry="Get Floor Plans">
+            View Floor Plans
+            <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+          </a>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ HIGHLIGHTS ============ -->
+    <section class="highlights" id="highlights" aria-labelledby="highlightsTitle">
+      <div class="container highlights__inner">
+        <div class="highlights__media reveal">
+          <img src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1200&h=1400&q=80" alt="Double-height living space opening onto a private pool" loading="lazy" />
+          <div class="highlights__stat">
+            <strong>70%</strong>
+            <span>Open Green<br />Spaces</span>
+          </div>
+        </div>
+
+        <div class="highlights__content reveal" id="highlights">
+          <p class="eyebrow">Project Highlights</p>
+          <h2 class="h2" id="highlightsTitle">Why Realeste<br />Stands Apart</h2>
+          <p class="body">Thoughtfully designed around light, space and wellbeing, every element of Realeste is crafted to elevate the way you live.</p>
+
+          <ol class="highlights__list">
+            <li>
+              <span class="highlights__num">01</span>
+              <div>
+                <h3>Low-Density Living</h3>
+                <p>Only 4 residences per floor for complete privacy.</p>
+              </div>
+            </li>
+            <li>
+              <span class="highlights__num">02</span>
+              <div>
+                <h3>Sky Clubhouse</h3>
+                <p>45,000 sq.ft. of leisure on the 38th floor.</p>
+              </div>
+            </li>
+            <li>
+              <span class="highlights__num">03</span>
+              <div>
+                <h3>11 ft Ceilings</h3>
+                <p>Floor-to-ceiling glazing in every living room.</p>
+              </div>
+            </li>
+            <li>
+              <span class="highlights__num">04</span>
+              <div>
+                <h3>IGBC Gold Rated</h3>
+                <p>Solar power, rainwater harvesting and EV charging.</p>
+              </div>
+            </li>
+            <li>
+              <span class="highlights__num">05</span>
+              <div>
+                <h3>3-Tier Security</h3>
+                <p>Smart access, CCTV and 24x7 manned gates.</p>
+              </div>
+            </li>
+            <li>
+              <span class="highlights__num">06</span>
+              <div>
+                <h3>Zero Vehicle Podium</h3>
+                <p>Car-free landscaped decks, safe for children.</p>
+              </div>
+            </li>
+          </ol>
+
+          <a href="#contact" class="btn btn--dark" data-enquiry="Download Brochure">
+            Download Brochure
+            <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIAL ============ -->
+    <section class="testimonial" id="testimonials" aria-label="Testimonials">
+      <div class="testimonial__bg" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?auto=format&fit=crop&w=1400&q=80" alt="" loading="lazy" />
+      </div>
+      <div class="container testimonial__inner">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <div class="slider" id="slider">
+          <figure class="slide">
+            <blockquote>Realeste is not just about beautiful homes, it's about the life you've always imagined.</blockquote>
+            <!-- <figcaption><strong>Ananya Sharma</strong><span>Homeowner</span></figcaption> -->
+          </figure>
+          <figure class="slide">
+            <blockquote>From the first walkthrough to handover, every promise was kept. Our home feels like a private retreat.</blockquote>
+            <!-- <figcaption><strong>Vikram Mehta</strong><span>Homeowner</span></figcaption> -->
+          </figure>
+          <figure class="slide">
+            <blockquote>The light, the views and the quiet — we wake up every morning grateful we chose Realeste.</blockquote>
+            <!-- <figcaption><strong>Priya &amp; Arjun Rao</strong><span>Homeowners</span></figcaption> -->
+          </figure>
+        </div>
+        <div class="dots" id="dots" role="tablist" aria-label="Choose testimonial"></div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery" id="gallery" aria-roledescription="carousel" aria-label="Project gallery">
+      <div class="container">
+        <div class="gallery__head reveal">
+          <p class="eyebrow">Gallery</p>
+          <h2 class="gallery__title" id="galleryTitle" aria-live="polite">Poolside Pavilion</h2>
+          <p class="gallery__caption" id="galleryCaption">Clubhouse</p>
+        </div>
+      </div>
+
+      <div class="coverflow" id="coverflow" tabindex="0" aria-label="Use arrow keys to browse">
+        <ul class="coverflow__track">
+          <li class="coverflow__slide" data-title="Sky Villas" data-caption="Private Pool Deck"><img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=700&h=1000&q=80" alt="Modern white villa with a private pool" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Resort-Style Pool" data-caption="Landscape Amenities"><img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=700&h=1000&q=80" alt="Garden pool with loungers" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Timber &amp; Glass" data-caption="Villa Exteriors"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=700&h=1000&q=80" alt="Contemporary timber and glass villa" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Poolside Pavilion" data-caption="Clubhouse"><img src="https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=700&h=1000&q=80" alt="Glass pavilion beside a lap pool" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Master Suite" data-caption="Penthouse Collection"><img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=700&h=1000&q=80" alt="Master bedroom with city view" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Wellness Studio" data-caption="Indoor Gym"><img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=700&h=1000&q=80" alt="Fully equipped indoor gym" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="The Arrival Court" data-caption="Grand Entrance"><img src="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=700&h=1000&q=80" alt="Dark facade with a warm-lit entrance" loading="lazy" draggable="false" /></li>
+          <li class="coverflow__slide" data-title="Heritage Villas" data-caption="Private Pool"><img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=700&h=1000&q=80" alt="White heritage-style villa with a pool" loading="lazy" draggable="false" /></li>
+        </ul>
+      </div>
+
+      <div class="coverflow__nav">
+        <button type="button" class="cf-btn cf-btn--prev" id="cfPrev" aria-label="Previous image">
+          <svg class="arrow" viewBox="0 0 20 10"><path d="M20 5H2M6 1L2 5l4 4" /></svg>
+        </button>
+        <button type="button" class="cf-btn cf-btn--next" id="cfNext" aria-label="Next image">
+          <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+        </button>
+      </div>
+    </section>
+
+    <!-- ============ LOCATION ============ -->
+    <section class="location" id="location">
+      <div class="container location__inner">
+        <div class="location__text reveal">
+          <p class="eyebrow">Prime Location</p>
+          <h2 class="h2">Located In The Heart<br />Of The City</h2>
+          <p class="body body--sm">Excellent connectivity to business hubs, top schools, hospitals, shopping malls and more.</p>
+          <a href="https://maps.google.com" target="_blank" rel="noopener" class="btn btn--outline" data-enquiry="Location Details">
+            Explore Location
+            <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+          </a>
+        </div>
+
+        <div class="map reveal" aria-label="Map showing project location">
+         <img src="https://www.thestatesman.com/wp-content/uploads/2020/04/googl_ED.jpg" alt="">
+        </div>
+
+        <ul class="distances reveal">
+          <li>
+            <svg class="icon" viewBox="0 0 32 32"><path d="M10 27V5l10 4-10 4"/><ellipse cx="16" cy="27" rx="10" ry="2"/></svg>
+            <span>Golf Course Road</span><b>5 mins</b>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 32 32"><path d="M28 6c-1-1-3-1-4 0l-5 5-12-3-2 2 9 5-4 5-4-1-2 2 5 3 3 5 2-2-1-4 5-4 5 9 2-2-3-12 5-5c1-1 1-3 0-4z"/></svg>
+            <span>IGI Airport</span><b>20 mins</b>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 32 32"><path d="M4 28h24M6 28V10h8v18M14 28V4h10v24M9 14h2M9 18h2M9 22h2M17 8h4M17 12h4M17 16h4M17 20h4"/></svg>
+            <span>DLF Cyber City</span><b>10 mins</b>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 32 32"><path d="M5 28V8h22v20M3 28h26M13 28v-6h6v6M16 11v6M13 14h6"/></svg>
+            <span>Medanta Hospital</span><b>12 mins</b>
+          </li>
+          <li>
+            <svg class="icon" viewBox="0 0 32 32"><path d="M7 10h18l-2 18H9zM12 10V8a4 4 0 0 1 8 0v2"/></svg>
+            <span>Ambience Mall</span><b>15 mins</b>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT BUILDER ============ -->
+    <section class="builder" id="builder">
+      <div class="container builder__inner">
+        <div class="builder__content reveal">
+          <p class="eyebrow">About The Builder</p>
+          <h2 class="h2">A Legacy Of Thoughtful Luxury</h2>
+          <p class="body">Developed by a team known for precision-led design and disciplined execution, Realeste is shaped with a refined understanding of premium living. Every residence is crafted to balance generous proportions, timeless architecture, and exceptional lifestyle convenience.</p>
+
+          <div class="builder__highlights">
+            <div class="builder__metric">
+              <strong>18+</strong>
+              <span>Years of Excellence</span>
+            </div>
+            <div class="builder__metric">
+              <strong>12</strong>
+              <span>Signature Projects</span>
+            </div>
+            <div class="builder__metric">
+              <strong>4.9/5</strong>
+              <span>Buyer Satisfaction</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="builder__panel reveal">
+          <div class="builder__brand">
+            <span class="builder__tag">Signature Developer</span>
+            <h3>Realeste Living</h3>
+          </div>
+
+          <ul class="builder__specs">
+            <li>
+              <span>Design Philosophy</span>
+              <strong>Minimalist Luxury</strong>
+            </li>
+            <li>
+              <span>Construction Standard</span>
+              <strong>Premium RCC Structure</strong>
+            </li>
+            <li>
+              <span>Interior Finish</span>
+              <strong>Vitrified Flooring &amp; Designer Fixtures</strong>
+            </li>
+            <li>
+              <span>Smart Living</span>
+              <strong>Home Automation Ready</strong>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer" id="contact">
+    <div class="container footer__inner">
+      <div class="footer__rera">
+        <p>TSRERA No:P02400005078</p>
+        <p>TGRERA Website: <a href="https://rera.telangana.gov.in/" target="_blank" rel="noopener">rera.telangana.gov.in/</a></p>
+      </div>
+
+      <p class="disclaimer" id="disclaimer">
+        This is only for information purposes and does not constitute any offer or contract. Customers are advised to have their independent evaluation. Artistic impression, as shown, is a pictorial conceptualization and indicative only, and actual may differ. The sale is subject to the terms of the Booking Application and Agreement For Sale. All information, contents, plans, and specifications<span class="disclaimer__dots" id="disclaimerDots"> ...</span><span class="disclaimer__more" id="disclaimerMore" hidden> are subject to change without prior notice at the sole discretion of the developer or the competent authorities. Images, renders, furniture, fixtures and landscaping shown are for representation purposes only and do not form part of the standard specifications. Prices, offers and availability are subject to change. Any purchase decision should be made only after verifying all details, approvals and documents with the developer. The developer shall not be held liable for any decision taken on the basis of the information contained herein.</span>
+      </p>
+      <button type="button" class="read-more" id="readMore" aria-expanded="false" aria-controls="disclaimer">Read more</button>
+
+      <p class="footer__bottom">
+        <a href="#">Disclaimer &amp; Privacy Policy</a>
+        <span class="sep">|</span>
+        <!-- <span>Copyright &copy;Realeste <span id="year">2026</span>. All Rights Reserved</span> -->
+        <!-- <span class="sep">|</span> -->
+        <span>Crafted By GTF Technologies</span>
+      </p>
+    </div>
+  </footer>
+
+  <!-- ============ ENQUIRY MODAL ============ -->
+  <div class="enquiry" id="enquiry" role="dialog" aria-modal="true" aria-labelledby="enquiryTitle" aria-hidden="true">
+    <div class="enquiry__backdrop" data-enquiry-close></div>
+
+    <div class="enquiry__dialog" role="document">
+      <button type="button" class="enquiry__close" data-enquiry-close aria-label="Close form">
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" /></svg>
+      </button>
+
+      <div class="enquiry__aside" aria-hidden="true">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=1100&q=80" alt="" />
+        <div class="enquiry__aside-text">
+          <span class="logo__mark"><i></i><i></i><i></i></span>
+          <p>Spaces that<br /><em>Inspire Living</em></p>
+          <small>Premium 3 &amp; 4 BHK Residences</small>
+        </div>
+      </div>
+
+      <div class="enquiry__body">
+        <form class="enquiry__form" id="enquiryForm" novalidate>
+          <p class="eyebrow">Enquire Now</p>
+          <h2 class="enquiry__title" id="enquiryTitle">Book A Site Visit</h2>
+          <p class="enquiry__sub">Share your details and our relationship manager will get in touch within 24 hours.</p>
+
+          <input type="hidden" name="source" id="enquirySource" />
+
+          <div class="field">
+            <input type="text" id="enqName" name="name" placeholder=" " autocomplete="name" required />
+            <label for="enqName">Full Name *</label>
+            <small class="field__error"></small>
+          </div>
+
+          <div class="field field--phone">
+            <span class="field__prefix">+91</span>
+            <input type="tel" id="enqPhone" name="phone" placeholder=" " inputmode="numeric" maxlength="10" autocomplete="tel-national" required />
+            <label for="enqPhone">Mobile Number *</label>
+            <small class="field__error"></small>
+          </div>
+
+          <div class="field">
+            <input type="email" id="enqEmail" name="email" placeholder=" " autocomplete="email" required />
+            <label for="enqEmail">Email Address *</label>
+            <small class="field__error"></small>
+          </div>
+
+          <div class="field field--textarea">
+            <textarea id="enqMessage" name="message" rows="3" maxlength="500" placeholder=" "></textarea>
+            <label for="enqMessage">Your Message (optional)</label>
+            <!-- <small class="field__count" id="enqMessageCount">0 / 500</small> -->
+          </div>
+
+          <label class="consent">
+            <input type="checkbox" id="enqConsent" name="consent" required />
+            <span>I authorise Realeste and its representatives to contact me via call, SMS, email or WhatsApp. This overrides any DND registration.</span>
+          </label>
+          <small class="field__error consent__error" id="consentError"></small>
+
+          <button type="submit" class="btn btn--dark enquiry__submit">
+            <span class="enquiry__submit-label">Submit Enquiry</span>
+            <svg class="arrow" viewBox="0 0 20 10"><path d="M0 5h18M14 1l4 4-4 4" /></svg>
+          </button>
+        </form>
+
+        <div class="enquiry__success" id="enquirySuccess" hidden>
+          <span class="enquiry__tick">
+            <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="22" /><path d="M14 25l7 7 13-15" /></svg>
+          </span>
+          <h2 class="enquiry__title">Thank You<span id="successName"></span>!</h2>
+          <p class="enquiry__sub">Your request for <strong id="successSource">Book A Site Visit</strong> has been received. Our team will reach out to you shortly.</p>
+          <button type="button" class="btn btn--outline" data-enquiry-close>Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ VIDEO MODAL ============ -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Project film">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__box">
+      <button class="modal__close" data-close aria-label="Close">&times;</button>
+      <div class="modal__frame" id="modalFrame"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
